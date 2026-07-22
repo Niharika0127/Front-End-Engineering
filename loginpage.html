@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeVerse Login</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background:linear-gradient(135deg,#5A189A,#8945c4,#9D4EDD);
+    min-height:100vh;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Background Circles */
+
+.circle{
+    position:fixed;
+    border-radius:50%;
+    background:rgba(255,165,0,0.18);
+}
+
+.c1{
+    width:220px;
+    height:220px;
+    top:-60px;
+    left:-50px;
+}
+
+.c2{
+    width:170px;
+    height:170px;
+    top:180px;
+    right:80px;
+}
+
+/* Navbar */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(255,255,255,.12);
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin:0 20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:orange;
+}
+
+.icons i{
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.icons i:hover{
+    color:orange;
+    transform:scale(1.2);
+}
+
+/* Login Container */
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:85vh;
+}
+
+.login-box{
+    width:400px;
+    background:rgba(255,255,255,.95);
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,.3);
+}
+
+.login-box h1{
+    text-align:center;
+    color:#5A189A;
+    margin-bottom:10px;
+    font-size:32px;
+}
+
+.login-box h2{
+    text-align:center;
+    color:#5A189A;
+    margin-bottom:25px;
+    font-size:22px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+    color:#444;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:6px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    font-size:16px;
+}
+
+input:focus{
+    border-color:#7B2CBF;
+}
+
+.forgot{
+    text-align:right;
+    margin-top:10px;
+}
+
+.forgot a{
+    text-decoration:none;
+    color:#5A189A;
+    font-size:14px;
+}
+
+.forgot a:hover{
+    text-decoration:underline;
+}
+
+button{
+    width:100%;
+    padding:13px;
+    margin-top:20px;
+    border:none;
+    border-radius:8px;
+    background:#5A189A;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#3C096C;
+}
+
+.signup{
+    text-align:center;
+    margin-top:18px;
+    color:#444;
+}
+
+.signup a{
+    text-decoration:none;
+    color:#5A189A;
+    font-weight:bold;
+}
+
+.signup a:hover{
+    text-decoration:underline;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Background Circles -->
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+
+<!-- Navbar -->
+<nav>
+
+    <div class="logo">CodeVerse</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+    <div class="icons">
+        <i class="fa-solid fa-bell"></i>
+    </div>
+
+</nav>
+
+<!-- Login Form -->
+
+<div class="container">
+
+    <div class="login-box">
+
+        <h1>WELCOME BACK</h1>
+        <h2>Login to Continue</h2>
+
+        <form action="/login" method="post">
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your Email"
+                required>
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your Password"
+                required>
+
+            <div class="forgot">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit">Login</button>
+
+            <div class="signup">
+                Don't have an account?
+                <a href="#">Sign Up</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

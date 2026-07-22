@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome To My Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+}
+
+/* Fixed Background Sections */
+.parallax1,
+.parallax2,
+.parallax3{
+    height:100vh;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.parallax1{
+    background-image:url("https://picsum.photos/id/1018/1600/900");
+}
+
+.parallax2{
+    background-image:url("https://picsum.photos/id/1015/1600/900");
+}
+
+.parallax3{
+    background-image:url("https://picsum.photos/id/1019/1600/900");
+}
+
+h1{
+    color:white;
+    font-size:60px;
+    background:rgba(0,0,0,0.5);
+    padding:20px 40px;
+    border-radius:10px;
+}
+
+/* Normal Sections */
+.content{
+    height:400px;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:30px;
+    padding:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="parallax1">
+    <h1>Welcome To My Website</h1>
+</div>
+
+<div class="content">
+    Scroll Down 👇
+</div>
+
+<div class="parallax2">
+    <h1>Beautiful Nature</h1>
+</div>
+
+<div class="content">
+    Keep Scrolling 👇
+</div>
+
+<div class="parallax3">
+    <h1>Thank You!</h1>
+</div>
+
+</body>
+</html>
